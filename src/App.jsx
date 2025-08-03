@@ -1,9 +1,20 @@
 import "./App.css";
+// import Footer from "./components/Footer";
+// import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <h1 className="text-red-500 text-2xl text-center">Job portal web app</h1>
+      <Home />
+
+      {/* <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+        <Navbar />
+        <main className="flex-grow">
+          <Home />
+        </main>
+        <Footer />
+      </div> */}
     </>
   );
 }
