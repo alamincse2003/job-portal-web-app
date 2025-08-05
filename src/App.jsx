@@ -1,5 +1,5 @@
 import "./App.css";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { ThemeProvider } from "./context/ThemeContext";
 import Home from "./pages/Home";
@@ -11,6 +11,7 @@ function App() {
         <div className="min-h-screen bg-white dark:bg-gray-900   dark:text-white   transition-colors duration-300">
           <Navbar />
           <Home />
+          <Footer />
         </div>
       </ThemeProvider>
     </>
