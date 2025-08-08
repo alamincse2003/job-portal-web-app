@@ -1,0 +1,79 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Frontend Developer",
+      "company": "Tech Solutions Ltd",
+      "location": "Dhaka",
+      "type": "Full-time",
+      "salary": "40,000-60,000 BDT",
+      "category": "Frontend",
+      "isRemote": true,
+      "postedAt": "2025-07-30",
+      "description": "We are looking for a skilled frontend developer with React experience."
+    },
+    {
+      "id": 2,
+      "title": "Backend Developer",
+      "company": "CodeWorks",
+      "location": "Chittagong",
+      "type": "Remote",
+      "salary": "50,000-70,000 BDT",
+      "category": "Backend",
+      "isRemote": true,
+      "postedAt": "2025-07-28",
+      "description": "We need a backend developer with Node.js and Express skills."
+    },
+    {
+      "id": 3,
+      "title": "React Developer",
+      "company": "ZYX Solutions",
+      "location": "Sylhet",
+      "type": "Full-time",
+      "salary": "45,000-65,000 BDT",
+      "category": "Frontend",
+      "isRemote": false,
+      "postedAt": "2025-07-25",
+      "description": "React dev with hooks and state management experience."
+    },
+    {
+      "id": 4,
+      "title": "Fullstack Developer",
+      "company": "BrainStation",
+      "location": "Dhaka",
+      "type": "Contract",
+      "salary": "60,000-80,000 BDT",
+      "category": "Fullstack",
+      "isRemote": true,
+      "postedAt": "2025-07-20",
+      "description": "Fullstack dev with React + Node experience."
+    },
+    {
+      "id": 5,
+      "title": "Website Developer",
+      "company": "XYZ Tech",
+      "location": "Dhaka",
+      "type": "Contract",
+      "salary": "60,000-80,000 BDT",
+      "category": "Fullstack",
+      "isRemote": true,
+      "postedAt": "2025-07-20",
+      "description": "Fullstack dev with React + Node experience."
+    },
+    {
+      "id": 6,
+      "title": "Fullstack Developer",
+      "company": "YXZ Tech",
+      "location": "Dhaka",
+      "type": "Contract",
+      "salary": "60,000-80,000 BDT",
+      "category": "Fullstack",
+      "isRemote": false,
+      "postedAt": "2025-07-20",
+      "description": "Fullstack dev with React + Node experience."
+    }
+  ],
+  "bookmarks": [],
+  "applications": [],
+  "users": []
+}
