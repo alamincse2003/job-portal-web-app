@@ -1,4 +1,5 @@
 import { FaRegBookmark, FaBookmark } from "react-icons/fa";
+import { Link } from "react-router";
 
 const JobCard = ({ job, isBookmarked, onToggleBookmark, onApply }) => {
   return (
@@ -12,6 +13,7 @@ const JobCard = ({ job, isBookmarked, onToggleBookmark, onApply }) => {
           {job.category} • {job.type} • {job.postedAt}
         </p>
         <p className="text-sm text-green-600 font-medium mt-2">{job.salary}</p>
+        <Link to={`/jobs/${job.id}`} className="text-blue-600 hover:underline">View Details</Link>
       </div>
 
       <div className="flex items-start md:items-center gap-3">
