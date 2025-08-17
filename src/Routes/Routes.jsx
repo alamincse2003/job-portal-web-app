@@ -1,11 +1,15 @@
 import Home from "../pages/Home";
 import Main from "../Layout/Main";
 import { createBrowserRouter } from "react-router-dom";
+import Jobs from "../pages/Jobs";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    children: [{ path: "/", element: <Home /> }],
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/jobs", element: <Jobs /> },
+    ],
   },
 ]);

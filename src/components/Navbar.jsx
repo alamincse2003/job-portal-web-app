@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import DarkModeToggler from "./DarkModeToggler";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,9 +18,24 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 text-gray-800 dark:text-gray-200">
-          <a href="/">Home</a>
-          <a href="#">Jobs</a>
-          <a href="#">About</a>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "underline" : "")}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/jobs"
+            className={({ isActive }) => (isActive ? "underline" : "")}
+          >
+            Jobs
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? "underline" : "")}
+          >
+            About
+          </NavLink>
         </div>
 
         {/* Right Side: Toggle Button + Mobile Menu Icon */}
