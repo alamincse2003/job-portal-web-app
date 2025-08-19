@@ -31,10 +31,10 @@ const Navbar = () => {
             Jobs
           </NavLink>
           <NavLink
-            to="/about"
+            to="/bookmarks"
             className={({ isActive }) => (isActive ? "underline" : "")}
           >
-            About
+            Bookmarks
           </NavLink>
         </div>
 
