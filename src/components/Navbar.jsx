@@ -36,6 +36,12 @@ const Navbar = () => {
           >
             Bookmarks
           </NavLink>
+          <NavLink
+            to="/applied"
+            className={({ isActive }) => (isActive ? "underline" : "")}
+          >
+            Applied Jobs
+          </NavLink>
         </div>
 
         {/* Right Side: Toggle Button + Mobile Menu Icon */}
@@ -53,15 +59,30 @@ const Navbar = () => {
       {/* Mobile Menu (Dropdown) */}
       {isOpen && (
         <div className="md:hidden px-6 pb-4 space-y-2 text-gray-800 dark:text-gray-200">
-          <a href="#" className="block">
+          <NavLink
+            to="/"
+            className={({ isActive }) => `block ${isActive ? "underline" : ""}`}
+          >
             Home
-          </a>
-          <a href="#" className="block">
+          </NavLink>
+          <NavLink
+            to="/jobs"
+            className={({ isActive }) => `block ${isActive ? "underline" : ""}`}
+          >
             Jobs
-          </a>
-          <a href="#" className="block">
-            About
-          </a>
+          </NavLink>
+          <NavLink
+            to="/bookmarks"
+            className={({ isActive }) => `block ${isActive ? "underline" : ""}`}
+          >
+            Bookmarks
+          </NavLink>
+          <NavLink
+            to="/applied"
+            className={({ isActive }) => `block ${isActive ? "underline" : ""}`}
+          >
+            Applied Jobs
+          </NavLink>
         </div>
       )}
     </nav>

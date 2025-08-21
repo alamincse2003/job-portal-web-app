@@ -31,14 +31,30 @@ const JobsDetails = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Application Submitted:", formData);
-    alert("Application submitted successfully!");
-    setShowForm(false);
-    setFormData({ name: "", email: "", resume: "", coverLetter: "" });
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Application Submitted:", formData);
+  //   alert("Application submitted successfully!");
+  //   setShowForm(false);
+  //   setFormData({ name: "", email: "", resume: "", coverLetter: "" });
+  // };
 
+  const handleApply = async (e) => {
+    e.preventDefault();
+    try {
+      await api.post("/applications", {
+        jobId: job.id,
+        title: job.title,
+        company: job.company,
+        location: job.location,
+        appliedAt: new Date().toISOString(),
+        ...formData,
+      });
+      alert(" Application submitted successfully!");
+    } catch (error) {
+      console.error("Error applying job:", error);
+    }
+  };
   if (!job) return <p className="text-center mt-10">Loading...</p>;
   return (
     <div className="max-w-3xl mx-auto mt-10 mb-10 p-3 shadow-md border rounded  bg-white dark:bg-gray-800 ">
@@ -69,7 +85,7 @@ const JobsDetails = () => {
       {/* Apply Form */}
       {showForm && (
         <form
-          onSubmit={handleSubmit}
+          onSubmit={handleApply}
           className="mt-6 space-y-4 bg-gray-100 dark:bg-gray-700 p-4 rounded-lg"
         >
           <div>
@@ -129,10 +145,13 @@ const JobsDetails = () => {
           </div>
 
           <div className="flex space-x-3">
-            <button
+            {/* <button
               type="submit"
               className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
             >
+              Submit Application
+            </button> */}
+            <button className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
               Submit Application
             </button>
             <button

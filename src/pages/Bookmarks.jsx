@@ -9,7 +9,7 @@ const Bookmarks = () => {
   }, []);
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Bookmarked Jobs</h2>
+      <h2 className="text-2xl font-bold mb-4 text-center">Bookmarked Jobs</h2>
 
       {bookmarks.length === 0 ? (
         <p className="text-gray-600">No bookmarked jobs yet.</p>

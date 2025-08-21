@@ -1,7 +1,7 @@
 {
   "jobs": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Frontend Developer",
       "company": "Tech Solutions Ltd",
       "location": "Dhaka",
@@ -13,7 +13,7 @@
       "description": "We are looking for a skilled frontend developer with React experience."
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Backend Developer",
       "company": "CodeWorks",
       "location": "Chittagong",
@@ -25,7 +25,7 @@
       "description": "We need a backend developer with Node.js and Express skills."
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "React Developer",
       "company": "ZYX Solutions",
       "location": "Rangpur",
@@ -37,7 +37,7 @@
       "description": "React dev with hooks and state management experience."
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Fullstack Developer",
       "company": "BrainStation",
       "location": "Dhaka",
@@ -49,7 +49,7 @@
       "description": "Fullstack dev with React + Node experience."
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Website Developer",
       "company": "XYZ Tech",
       "location": "Dhaka",
@@ -61,7 +61,7 @@
       "description": "Fullstack dev with React + Node experience."
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Fullstack Developer",
       "company": "YXZ Tech",
       "location": "Dhaka",
@@ -74,6 +74,31 @@
     }
   ],
   "bookmarks": [],
-  "applications": [],
+  "applications": [
+    {
+      "id": "741b",
+      "jobId": "1",
+      "title": "Frontend Developer",
+      "company": "Tech Solutions Ltd",
+      "location": "Dhaka",
+      "appliedAt": "2025-08-21T01:48:03.409Z",
+      "name": "Leah Barlow",
+      "email": "lopaxi@mailinator.com",
+      "resume": "https://www.wiholo.ca",
+      "coverLetter": "Quae dolorum maiores"
+    },
+    {
+      "id": "6754",
+      "jobId": "2",
+      "title": "Backend Developer",
+      "company": "CodeWorks",
+      "location": "Chittagong",
+      "appliedAt": "2025-08-21T01:50:44.203Z",
+      "name": "Emily Blankenship",
+      "email": "ruwur@mailinator.com",
+      "resume": "https://www.timyqikywovo.mobi",
+      "coverLetter": "Irure sit iure animi"
+    }
+  ],
   "users": []
 }
