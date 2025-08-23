@@ -9,7 +9,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-gray-200 dark:bg-gray-900 shadow transition-colors duration-300">
+    <nav className="bg-gray-200 sticky  top-0 dark:bg-gray-900 shadow transition-colors duration-300">
       <div className="flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <div className="text-xl font-bold text-gray-900 dark:text-white">

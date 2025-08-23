@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 const Footer = () => {
   return (
     <footer className="bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 py-8 px-4">
@@ -15,24 +16,36 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#" className="hover:underline">
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "underline" : "")}
+              >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <NavLink
+                to="/jobs"
+                className={({ isActive }) => (isActive ? "underline" : "")}
+              >
                 Jobs
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                About
-              </a>
+              <NavLink
+                to="/bookmarks"
+                className={({ isActive }) => (isActive ? "underline" : "")}
+              >
+                Bookmarks
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="hover:underline">
-                Contact
-              </a>
+              <NavLink
+                to="/applied"
+                className={({ isActive }) => (isActive ? "underline" : "")}
+              >
+                Applied Jobs
+              </NavLink>
             </li>
           </ul>
         </div>
