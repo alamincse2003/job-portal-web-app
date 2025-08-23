@@ -100,5 +100,54 @@
       "coverLetter": "Irure sit iure animi"
     }
   ],
-  "users": []
+  "categories": [
+    {
+      "id": 1,
+      "title": "Remote Jobs",
+      "desc": "Work from anywhere, flexible timing.",
+      "icon": "home"
+    },
+    {
+      "id": 2,
+      "title": "Onsite Jobs",
+      "desc": "Join teams directly in the office.",
+      "icon": "briefcase"
+    },
+    {
+      "id": 3,
+      "title": "Full-time",
+      "desc": "Stable jobs with long-term growth.",
+      "icon": "clock"
+    },
+    {
+      "id": 4,
+      "title": "Internship",
+      "desc": "Gain experience and start your career.",
+      "icon": "graduationCap"
+    }
+  ],
+  "users": [],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "position": "Frontend Developer",
+      "review": "This platform helped me land my dream job within a week!",
+      "image": "https://i.pravatar.cc/150?img=5"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Smith",
+      "position": "UI/UX Designer",
+      "review": "Very smooth process and a wide range of job opportunities.",
+      "image": "https://i.pravatar.cc/150?img=8"
+    },
+    {
+      "id": 3,
+      "name": "Michael Lee",
+      "position": "Full Stack Engineer",
+      "review": "Highly recommended for freshers and experienced professionals alike.",
+      "image": "https://i.pravatar.cc/150?img=7"
+    }
+  ]
 }
