@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import api from "../services/api";
+import { AuthContext } from "../context/AuthContext";
 
 const JobsDetails = () => {
+  const { user } = useContext(AuthContext);
+  // console.log(user);
+  const navigate = useNavigate();
   const { id } = useParams();
   const [job, setJob] = useState(null);
   const [showForm, setShowForm] = useState(false);
@@ -41,8 +45,12 @@ const JobsDetails = () => {
 
   const handleApply = async (e) => {
     e.preventDefault();
+    if (!user) {
+      return navigate("/login", { state: { from: location } });
+    }
     try {
       await api.post("/applications", {
+        userId: user.uid,
         jobId: job.id,
         title: job.title,
         company: job.company,
@@ -55,7 +63,8 @@ const JobsDetails = () => {
       console.error("Error applying job:", error);
     }
   };
-  if (!job) return <p className="text-center mt-10">Loading...</p>;
+
+  if (!job) return <p className="text-center text-red-600 mt-10">Loading...</p>;
   return (
     <div className="max-w-3xl mx-auto mt-10 mb-10 p-3 shadow-md border rounded  bg-white dark:bg-gray-800 ">
       <h1 className="text-2xl font-bold text-gray-900 dark:text-white">

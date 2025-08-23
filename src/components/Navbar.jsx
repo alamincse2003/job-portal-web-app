@@ -1,12 +1,23 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import DarkModeToggler from "./DarkModeToggler";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
+import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const { user, logOut } = useContext(AuthContext);
+
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const handleLogout = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.error("Logout failed:", error.message);
+    }
+  };
 
   return (
     <nav className="bg-gray-200 sticky  top-0 dark:bg-gray-900 shadow transition-colors duration-300">
@@ -42,6 +53,20 @@ const Navbar = () => {
           >
             Applied Jobs
           </NavLink>
+
+          {/* Show login/logout based on user */}
+          {user ? (
+            <button
+              onClick={handleLogout}
+              className="text-red-600 font-semibold"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to="/login" className="text-blue-600 font-semibold">
+              Login
+            </Link>
+          )}
         </div>
 
         {/* Right Side: Toggle Button + Mobile Menu Icon */}
@@ -83,6 +108,19 @@ const Navbar = () => {
           >
             Applied Jobs
           </NavLink>
+          {/* Show login/logout based on user */}
+          {user ? (
+            <button
+              onClick={handleLogout}
+              className="text-red-600 font-semibold"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to="/login" className="text-blue-600 font-semibold">
+              Login
+            </Link>
+          )}
         </div>
       )}
     </nav>

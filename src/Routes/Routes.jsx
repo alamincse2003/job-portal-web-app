@@ -5,7 +5,9 @@ import Jobs from "../pages/Jobs";
 import JobsDetails from "../pages/JobsDetails";
 import Bookmarks from "../pages/BookMarks";
 import AppliedJobs from "../pages/AppliedJobs";
-
+import Signup from "../pages/Signup";
+import Login from "../pages/Login";
+import PrivateRoute from "./PrivateRoute";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -15,7 +17,16 @@ export const router = createBrowserRouter([
       { path: "/jobs", element: <Jobs /> },
       { path: "/jobs/:id", element: <JobsDetails /> },
       { path: "/bookmarks", element: <Bookmarks /> },
-      { path: "/applied", element: <AppliedJobs /> },
+      {
+        path: "/applied",
+        element: (
+          <PrivateRoute>
+            <AppliedJobs />
+          </PrivateRoute>
+        ),
+      },
+      { path: "/signup", element: <Signup /> },
+      { path: "/login", element: <Login /> },
     ],
   },
 ]);

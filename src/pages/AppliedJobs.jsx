@@ -1,15 +1,41 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
+import { getAuth } from "firebase/auth";
 
 const AppliedJobs = () => {
   const [applications, setApplications] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // useEffect(() => {
+  //   const fetchApplications = async () => {
+  //     try {
+  //       const res = await api.get("/applications");
+  //       setApplications(res.data);
+  //     } catch (error) {
+  //       console.error("Error fetching applications:", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+  //   fetchApplications();
+  // }, []);
   useEffect(() => {
     const fetchApplications = async () => {
       try {
+        const auth = getAuth();
+        const user = auth.currentUser;
+
+        if (!user) {
+          setApplications([]);
+          setLoading(false);
+          return;
+        }
+
         const res = await api.get("/applications");
-        setApplications(res.data);
+        // শুধু current user এর application দেখাবে
+        const userApps = res.data.filter((app) => app.userId === user.uid);
+
+        setApplications(userApps);
       } catch (error) {
         console.error("Error fetching applications:", error);
       } finally {
@@ -18,6 +44,7 @@ const AppliedJobs = () => {
     };
     fetchApplications();
   }, []);
+
   if (loading) return <p className="text-center mt-10">Loading...</p>;
   return (
     <div className="max-w-4xl mx-auto p-6">
