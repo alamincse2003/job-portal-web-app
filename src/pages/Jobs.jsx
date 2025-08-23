@@ -93,10 +93,9 @@ const Jobs = () => {
     console.log("toggle bookmark", id);
   };
 
-  const handleApply = (job) => {
-    // placeholder — implement applications POST later
-    alert("Apply clicked for: " + job.title);
-  };
+  // const handleApply = (job) => {
+  //   alert("Apply clicked for: " + job.title);
+  // };
 
   return (
     <div className="max-w-5xl mx-auto p-4 space-y-4">
@@ -181,7 +180,7 @@ const Jobs = () => {
                   job={job}
                   isBookmarked={false}
                   onToggleBookmark={handleToggleBookmark}
-                  onApply={handleApply}
+                  // onApply={handleApply}
                 />
               ))
             )}

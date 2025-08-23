@@ -3,7 +3,7 @@ import { FaRegBookmark, FaBookmark } from "react-icons/fa";
 import { Link } from "react-router";
 import { getBookmarks, toggleBookmark } from "../utils/bookmark";
 
-const JobCard = ({ job, isBookmarked, onToggleBookmark, onApply }) => {
+const JobCard = ({ job, isBookmarked }) => {
   const [bookmarked, setBookmarked] = useState(false);
 
   useEffect(() => {
@@ -34,12 +34,12 @@ const JobCard = ({ job, isBookmarked, onToggleBookmark, onApply }) => {
       </div>
 
       <div className="flex items-start md:items-center gap-3">
-        <button
+        {/* <button
           onClick={() => onApply(job)}
           className="px-3 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
         >
           Apply
-        </button>
+        </button> */}
 
         <button
           onClick={handleBookmark}
