@@ -16,6 +16,7 @@ const JobsDetails = () => {
     resume: "",
     coverLetter: "",
   });
+
   useEffect(() => {
     const fetchJob = async () => {
       try {

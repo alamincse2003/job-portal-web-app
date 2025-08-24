@@ -1,24 +1,11 @@
 import { useEffect, useState } from "react";
-import api from "../services/api";
 import { getAuth } from "firebase/auth";
+import api from "../services/api";
 
 const AppliedJobs = () => {
   const [applications, setApplications] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const fetchApplications = async () => {
-  //     try {
-  //       const res = await api.get("/applications");
-  //       setApplications(res.data);
-  //     } catch (error) {
-  //       console.error("Error fetching applications:", error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchApplications();
-  // }, []);
   useEffect(() => {
     const fetchApplications = async () => {
       try {
@@ -32,7 +19,7 @@ const AppliedJobs = () => {
         }
 
         const res = await api.get("/applications");
-        // শুধু current user এর application দেখাবে
+        //  current user of application show
         const userApps = res.data.filter((app) => app.userId === user.uid);
 
         setApplications(userApps);

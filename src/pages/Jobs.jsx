@@ -44,7 +44,7 @@ const Jobs = () => {
     };
   }, []);
 
-  // filtering logic (client-side)
+  // filtering logic
   const filtered = useMemo(() => {
     let list = jobs;
 

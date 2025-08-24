@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
+  baseURL: "https://job-portal-fl7xln632-alamincse2003s-projects.vercel.app",
   // baseURL: "http://localhost:5000",
-  baseURL: import.meta.env.job_portal_web_app,
   headers: {
     "Content-Type": "application/json",
   },
