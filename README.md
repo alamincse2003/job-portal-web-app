@@ -1,12 +1,34 @@
-# React + Vite
+ # Job Portal Web App 
+A **Job Portal Web Application** built with **React, Tailwind CSS, React Router, Context API, and MockAPI**.  
+This project allows users to browse jobs, search & filter them, apply, and also provides an **Admin Panel** to manage jobs.  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🚀 Live Demo  
+👉 [Live Website]([https://your-live-link.com](https://job-portal-web-app-ashy.vercel.app/))  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 💻 GitHub Repository  
+👉 [GitHub Repo]([https://github.com/your-username/job-portal](https://github.com/alamincse2003/job-portal-web-app))  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features  
+
+- 🔎 **Job Listings** with search & filter options (category, location, etc.)  
+- 📑 **Pagination** for smooth navigation  
+- ⭐ **Bookmark Jobs** to view later  
+- 📝 **Apply to Jobs** directly  
+- 🌓 **Dark/Light Mode** support  
+- 🔐 **User Authentication (Signup/Login)**  
+- 📱 **Responsive Design** (Mobile + Desktop)  
+- 🚀 **API Integration** using  JSON Server  
+
+---
+
+## 🛠️ Tech Stack  
+
+- **Frontend:** React, Tailwind CSS, React Router  
+- **State Management:** Context API  
+- **Backend / API:** JSON Server  
+- **Deployment:** Vercel (Frontend) 
+
