@@ -36,21 +36,14 @@ const JobsDetails = () => {
     });
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log("Application Submitted:", formData);
-  //   alert("Application submitted successfully!");
-  //   setShowForm(false);
-  //   setFormData({ name: "", email: "", resume: "", coverLetter: "" });
-  // };
-
   const handleApply = async (e) => {
     e.preventDefault();
     if (!user) {
-      return navigate("/login", { state: { from: location } });
+      navigate("/login", { state: { from: location.pathname } });
+      return;
     }
     try {
-      await api.post("/applications", {
+      const res = await api.post("/applications", {
         userId: user.uid,
         jobId: job.id,
         title: job.title,
@@ -59,9 +52,15 @@ const JobsDetails = () => {
         appliedAt: new Date().toISOString(),
         ...formData,
       });
-      alert(" Application submitted successfully!");
+
+      if (res.data.message) {
+        alert(res.data.message); // Live mode message
+      } else {
+        alert("Application submitted successfully!");
+      }
     } catch (error) {
       console.error("Error applying job:", error);
+      alert("Failed to submit application. Try again later.");
     }
   };
 
