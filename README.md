@@ -5,7 +5,7 @@ This project allows users to browse jobs, search & filter them, apply, and also 
 ---
 
 ## 🚀 Live Demo  
-👉 [Live Website]([https://your-live-link.com](https://job-portal-web-app-ashy.vercel.app/))  
+👉 [Live Website]([https://your-live-link.com](https://job-portal-web-app-ashy.vercel.app/])  
 
 ## 💻 GitHub Repository  
 👉 [GitHub Repo]([https://github.com/your-username/job-portal](https://github.com/alamincse2003/job-portal-web-app))  
